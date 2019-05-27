@@ -3,6 +3,8 @@ package controller.command.common;
 import controller.util.Configuration;
 import model.entity.User;
 import model.service.LoginService;
+import model.validation.IRegistationValidation;
+import model.validation.imp.RegistrationValidation;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import sun.rmi.runtime.Log;
@@ -19,6 +21,8 @@ public class RegisterCommand implements Command {
     private static final String SURNAME = "surname";
     private static final String PHONE = "phone";
     public static final Logger LOG = LogManager.getLogger(RegisterCommand.class);
+    private IRegistationValidation validation = new RegistrationValidation();
+
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -29,6 +33,35 @@ public class RegisterCommand implements Command {
         String surname = request.getParameter(SURNAME).trim();
         String phone = request.getParameter(PHONE).trim();
 
+        if(!isEmailInpValid(request)){
+            request.setAttribute("errorMessage", true);
+            LOG.info("Uncorrect EMAIL");
+            return page;
+        }
+
+        if(!isPassInpValid(request)){
+            request.setAttribute("errorMessage", true);
+            LOG.info("Uncorrect PASS");
+            return page;
+        }
+
+        if (!isFirstNameInpValid(request)) {
+            request.setAttribute("errorMessage", true);
+            LOG.info("Uncorrect FIRST_NAME");
+            return page;
+        }
+
+        if (!isSecondNameInpValid(request)) {
+            request.setAttribute("errorMessage", true);
+            LOG.info("Uncorrect SURNAME");
+            return page;
+        }
+
+        if(!isPhoneInpValid(request)){
+            request.setAttribute("errorMessage", true);
+            LOG.info("Uncorrect PHONE");
+            return page;
+        }
 
         if(LoginService.getInstance().isPresentLogin(email) == null){
             User user = new User.Builder()
@@ -47,12 +80,55 @@ public class RegisterCommand implements Command {
             }
             else
                 page =  Configuration.getInstance().getConfig(Configuration.LOGIN);
-                 LOG.error("User id =" + user.getId() + ", user was created.");
+                 LOG.info("User id =" + user.getId() + ", user was created.");
 
 
         } else {
             request.setAttribute("errorMessage", true);
         }
         return page;
+    }
+
+    private boolean isEmailInpValid(HttpServletRequest request) {
+        if (validation.isEmailValid(request.getParameter(EMAIL))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean isFirstNameInpValid(HttpServletRequest request) {
+        if (validation.isFirsNameUAValid(request.getParameter(NAME)) ||
+                validation.isFirsNameENValid(request.getParameter(NAME))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean isSecondNameInpValid(HttpServletRequest request) {
+        if (validation.isSecondNameUAValid(request.getParameter(SURNAME)) ||
+                validation.isSecondNameENValid(request.getParameter(SURNAME))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean isPassInpValid(HttpServletRequest request) {
+        if (validation.isPasswordValid(request.getParameter(PASSWORD))) {
+            return true;
+        } else{
+        return false;
+        }
+    }
+
+
+    private boolean isPhoneInpValid(HttpServletRequest request) {
+        if (validation.isPhoneValid(request.getParameter(PHONE))) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

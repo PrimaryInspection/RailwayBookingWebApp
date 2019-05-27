@@ -23,7 +23,7 @@ public class ChangeUsersCommand implements Command {
         HttpSession session = request.getSession();
         if (userNow == null || !userNow.isAdmin())
             return Configuration.getInstance().getConfig(Configuration.LOGIN);
-        List<User> users = (List<User>) request.getSession(false).getAttribute("users");
+        List<User> users = (List<User>) request.getSession(false).getAttribute(USERS_ATTRIBUTE);
         for (User user : users) {
             switch (request.getParameter(user.getId().toString())) {
                 case DELETE:

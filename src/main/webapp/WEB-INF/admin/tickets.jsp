@@ -6,7 +6,7 @@
 
 <html>
 <head>
-    <title>Railway System</title>
+    <title>Railway Booking</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <link rel="stylesheet"
           type="text/css"
@@ -26,7 +26,7 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand">Railway System</a>
+            <a class="navbar-brand">Railway Booking</a>
         </div>
         <ul class="nav navbar-nav">
             <li><a href="/RailwaySystem?command=users"><fmt:message key="navbar.users" bundle="${navbar}"/></a></li>

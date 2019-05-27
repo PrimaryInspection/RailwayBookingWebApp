@@ -57,7 +57,6 @@
                    style="width: 100%; margin-bottom: 10px"
                    value="${fn:escapeXml(surname)}"
             />
-            <%--pattern="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"--%>
             <input type="tel" name="phone" placeholder="<fmt:message key="login.tel" bundle="${login}"/>"
                    required
                    class="form-control"
