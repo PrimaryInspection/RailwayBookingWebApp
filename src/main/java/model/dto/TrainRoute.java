@@ -25,6 +25,13 @@ public class TrainRoute {
 
     private Double distance;
 
+    public TrainRoute(long l, long l1, long l2, long l3, long l4, String test, String test1, String test2, String test3, double v, double v1, double v2, double v3) {
+    }
+
+    public TrainRoute() {
+
+    }
+
     public Long getTrainId() {
         return trainId;
     }

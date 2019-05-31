@@ -1,0 +1,109 @@
+2019-05-31 16:29:51 INFO  MySQLUserDAO:185 - Successful Find by parameter EMAIL = user@gmail.com
+2019-05-31 16:29:51 INFO  LoginService:40 - Successful operation with UserDAO.Method: isPresentUser()
+2019-05-31 16:29:52 INFO  MySQLRouteDAO:51 - Successful Find All ROUTE
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 2
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 4
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 2
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:29:52 INFO  RouteService:66 - Find All Available FROM Stations
+2019-05-31 16:29:52 INFO  MySQLRouteDAO:51 - Successful Find All ROUTE
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 2
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 4
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 2
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:29:52 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:29:52 INFO  RouteService:87 - Find All Available TO Stations
+2019-05-31 16:29:52 INFO  LoginCommand:87 - User is: user, redirect to User's page.
+2019-05-31 16:29:52 INFO  LoginCommand:63 - Succsesfull checking password.
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  MySQLRouteDAO:155 - Successful Find by parameter FROMID = 1
+2019-05-31 16:30:12 INFO  RouteService:101 - Find Route by Stations: FROM Kyiv --- TO Lviv
+2019-05-31 16:30:12 INFO  RouteService:121 - Find Routes from TIME - Sat May 25 00:00:00 EEST 2019
+2019-05-31 16:30:12 INFO  MySQLTrainDAO:134 - Successful Find by parameter ROUTEID = 8
+2019-05-31 16:30:12 INFO  MySQLTrainDAO:134 - Successful Find by parameter ROUTEID = 9
+2019-05-31 16:30:12 INFO  MySQLTrainDAO:134 - Successful Find by parameter ROUTEID = 10
+2019-05-31 16:30:12 INFO  MySQLTrainDAO:134 - Successful Find by parameter ROUTEID = 11
+2019-05-31 16:30:12 INFO  TrainService:54 - Find Trains by Routes
+2019-05-31 16:30:12 INFO  MySQLRouteDAO:155 - Successful Find by parameter ID = 8
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  TrainService:122 - Format date - 25.05.2019
+17:20
+2019-05-31 16:30:12 INFO  TrainService:122 - Format date - 25.05.2019
+23:35
+2019-05-31 16:30:12 INFO  MySQLPriceDAO:63 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLPriceDAO:63 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLPriceDAO:63 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLRouteDAO:155 - Successful Find by parameter ID = 9
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  TrainService:122 - Format date - 25.05.2019
+23:20
+2019-05-31 16:30:12 INFO  TrainService:122 - Format date - 26.05.2019
+05:15
+2019-05-31 16:30:12 INFO  MySQLPriceDAO:63 - Successful Find by parameter ID = 2
+2019-05-31 16:30:12 INFO  MySQLPriceDAO:63 - Successful Find by parameter ID = 2
+2019-05-31 16:30:12 INFO  MySQLPriceDAO:63 - Successful Find by parameter ID = 2
+2019-05-31 16:30:12 INFO  MySQLRouteDAO:155 - Successful Find by parameter ID = 10
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  TrainService:122 - Format date - 26.05.2019
+10:45
+2019-05-31 16:30:12 INFO  TrainService:122 - Format date - 26.05.2019
+15:00
+2019-05-31 16:30:12 INFO  MySQLPriceDAO:63 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  MySQLPriceDAO:63 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  MySQLPriceDAO:63 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  MySQLRouteDAO:155 - Successful Find by parameter ID = 11
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  TrainService:122 - Format date - 25.05.2019
+08:31
+2019-05-31 16:30:12 INFO  TrainService:122 - Format date - 25.05.2019
+13:52
+2019-05-31 16:30:12 INFO  MySQLPriceDAO:63 - Successful Find by parameter ID = 2
+2019-05-31 16:30:12 INFO  MySQLPriceDAO:63 - Successful Find by parameter ID = 2
+2019-05-31 16:30:12 INFO  MySQLPriceDAO:63 - Successful Find by parameter ID = 2
+2019-05-31 16:30:12 INFO  TrainService:96 - Find Trains FROM ID=1 -- TO ID=3, FROM DATE=Sat May 25 00:00:00 EEST 2019
+2019-05-31 16:30:12 INFO  MySQLRouteDAO:51 - Successful Find All ROUTE
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 2
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 4
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 2
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  RouteService:66 - Find All Available FROM Stations
+2019-05-31 16:30:12 INFO  MySQLRouteDAO:51 - Successful Find All ROUTE
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 2
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 4
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 1
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 2
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  MySQLStationDAO:67 - Successful Find by parameter ID = 3
+2019-05-31 16:30:12 INFO  RouteService:87 - Find All Available TO Stations
+2019-05-31 16:34:27 INFO  MySQLUserDAO:185 - Successful Find by parameter EMAIL = asfasag
+2019-05-31 16:34:27 INFO  LoginService:40 - Successful operation with UserDAO.Method: isPresentUser()

@@ -9,7 +9,12 @@ public class LogMessageServiceUtil {
     private static final Character DOT = '.';
 
 
-
+/**
+ * Bulder for creating info logs
+ * @param dao - the place where the error occurred
+ * @param method - the method where the error occurred
+ *
+ * */
     public static String createMethodInfo(String dao, String method){
         StringBuilder builder = new StringBuilder();
         builder.append(SUCCESSFUL_OPERATION).append(dao).append(DOT);
@@ -17,6 +22,12 @@ public class LogMessageServiceUtil {
         return builder.toString();
     }
 
+    /**
+     * Bulder for creating error logs
+     * @param dao - the place where the error occurred
+     * @param method - the method where the error occurred
+     *
+     * */
     public static String createMethodError(String dao, String method){
         StringBuilder builder = new StringBuilder();
         builder.append(ERROR_WITH_DAO).append(dao).append(DOT);

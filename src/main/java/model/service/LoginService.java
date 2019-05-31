@@ -37,7 +37,6 @@ public class LoginService {
 
     public User isPresentLogin(String login) {
         User user = factory.createUserDAO().findByEmail(login);
-        LOG.info(LogMessageServiceUtil.createMethodInfo(USER_DAO, IS_PRESENT_LOGIN));
         return user;
     }
 

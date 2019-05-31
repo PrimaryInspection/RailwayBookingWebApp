@@ -23,6 +23,14 @@ import static controller.command.admin.CommandAdminUtil.*;
 public class CancelAllTicketsCommand implements Command {
     public static final Logger LOG = LogManager.getLogger(ApproveCommand.class);
 
+    /**
+     * Command for canceling all of user's tickets on admin's page
+     *
+     *@param request - HTTP Servlet request
+     *@param response - HTTP Servlet response
+     *@throws ServletException,IOException
+     *@return page - /WEB-INF/admin/tickets.jsp
+     * */
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String page = Configuration.getInstance().getConfig(Configuration.TICKETS_ADMIN);

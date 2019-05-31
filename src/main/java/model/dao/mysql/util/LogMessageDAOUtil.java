@@ -116,14 +116,6 @@ public class LogMessageDAOUtil {
         return createInfo(CANNOT + SPACE + UPDATE, tableName, ID, id);
     }
 
-    /**
-     * @param tableName
-     * @param id
-     * @return Cannot DELETE {tableName} with ID = {id}
-     */
-    public static String createErrorDelete(String tableName, Long id){
-        return createInfo(CANNOT + SPACE + DELETE, tableName, ID, id);
-    }
 
     /**
      * @return Cannot close()

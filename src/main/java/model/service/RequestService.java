@@ -43,6 +43,12 @@ public class RequestService {
         return INSTANCE;
     }
 
+    /**
+     * Create user's request in database
+     * @param request - HTTP Servlet request
+     * @return factory.createRequestDAO().create(request) - Request request
+     *
+     * */
     public Request addRequest(Request request) throws InvalidDataBaseOperation {
         TypePlace place = request.getType();
         Train train = factory.createTrainDAO().findById(request.getTrainId());
@@ -77,6 +83,12 @@ public class RequestService {
         return factory.createRequestDAO().create(request);
     }
 
+    /**
+     * Creating pre-sale tickets(reserving)
+     * @param tickets - reserved tickets for user
+     * @throws InvalidDataBaseOperation
+     *
+     * */
     public void reserveTickets(final List<Ticket> tickets) throws InvalidDataBaseOperation {
         for (Ticket ticket : tickets) {
             Request request = new Request.RequestBuilder()
@@ -91,6 +103,14 @@ public class RequestService {
         }
     }
 
+    /**
+     * Creating tickets
+     * @param parameter - type of ticket(C,B,L)
+     * @param user - instance of User entity
+     * @param trainRoute - info about train for creating tickets
+     * @return ticket
+     *
+     * */
     public Ticket makeTicket(String parameter, User user, TrainRoute trainRoute) {
         if (!parameter.equals("none")) {
             Ticket ticket = new Ticket();
@@ -136,6 +156,12 @@ public class RequestService {
         return null;
     }
 
+    /**
+     * Getting all tickets from database
+     *
+     * @return List<Ticket> result
+     *
+     * */
     public List<Ticket> findAllTickets() {
         List<Request> requests = factory.createRequestDAO().findAll();
         List<Ticket> result = new ArrayList<>();
@@ -200,7 +226,11 @@ public class RequestService {
         LOG.info("Add Ticket to REQUEST");
         return result;
     }
-
+    /**
+     * Change user's ticket status to 'canceled'
+     * @param tickets - list of tickets
+     * @throws  InvalidDataBaseOperation
+     * */
     public void cancelRequest(List<Ticket> tickets) throws InvalidDataBaseOperation {
         List<Request> requests = new ArrayList<>();
         for (Ticket ticket1 : tickets) {
@@ -209,6 +239,11 @@ public class RequestService {
         factory.createRequestDAO().deleteRequests(requests);
     }
 
+    /**
+     * Change user's ticket status to 'approved'
+     * @param tickets - list of tickets
+     * @throws  InvalidDataBaseOperation
+     * */
     public void approveRequest(List<Ticket> tickets) throws InvalidDataBaseOperation {
         List<Request> requests = new ArrayList<>();
         for (Ticket ticket1 : tickets) {

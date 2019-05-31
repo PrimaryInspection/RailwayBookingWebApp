@@ -43,6 +43,12 @@ public class AdminService {
         return INSTANCE;
     }
 
+    /**
+     * Getting all users and pagination logic
+     * @param request - HTTP Servlet request
+     * @return users - list of users
+     *
+     * */
     public List<User> getAllUsersAdmin(HttpServletRequest request) {
         User userNow = (User) request.getSession(false).getAttribute(USER_ATTRIBUTE);
         HttpSession session = request.getSession(false);

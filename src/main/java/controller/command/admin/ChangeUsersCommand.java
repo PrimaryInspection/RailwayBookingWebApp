@@ -16,6 +16,14 @@ import static controller.command.admin.CommandAdminUtil.*;
 
 
 public class ChangeUsersCommand implements Command {
+    /**
+     * Command for changing users status on admin's page
+     *
+     *@param request - HTTP Servlet request
+     *@param response - HTTP Servlet response
+     *@throws ServletException,IOException
+     *@return page - /WEB-INF/admin/users.jsp
+     * */
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String page = Configuration.getInstance().getConfig(Configuration.ADMIN);

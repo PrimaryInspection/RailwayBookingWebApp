@@ -16,6 +16,14 @@ import static controller.command.admin.CommandAdminUtil.USERS_ATTRIBUTE;
 import static controller.command.admin.CommandAdminUtil.USER_ATTRIBUTE;
 
 public class UsersCommand implements Command {
+    /**
+     * Command for displaying users on page
+     *
+     *@param request - HTTP Servlet request
+     *@param response - HTTP Servlet response
+     *@throws ServletException,IOException
+     *@return page - /WEB-INF/admin/tickets.jsp
+     * */
     @SuppressWarnings("all")
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

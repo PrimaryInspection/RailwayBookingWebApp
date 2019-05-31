@@ -22,6 +22,15 @@ public class LoginCommand implements Command {
     private static final String EMAIL = "email";
     private static final String PASSWORD = "password";
     public static final Logger LOG = LogManager.getLogger(LoginCommand.class);
+
+    /**
+     * Command for log in
+     *
+     *@param request - HTTP Servlet request
+     *@param response - HTTP Servlet response
+     *@throws ServletException,IOException
+     *@return page
+     * */
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String page = null;
@@ -38,6 +47,15 @@ public class LoginCommand implements Command {
         return page;
     }
 
+    /**
+     * Method for checking password input
+     *
+     *@param request - HTTP Servlet request
+     *@param user - instance of User's entity
+     *@param inputPassword - user's password
+     *@throws ServletException,IOException
+     *@return page
+     * */
     private String checkIfCorrectPassword(User user, HttpServletRequest request, String inputPassword){
         String page = null;
         if (LoginService.getInstance().checkPassword(user, inputPassword)) {
@@ -51,6 +69,14 @@ public class LoginCommand implements Command {
         return page;
     }
 
+    /**
+     * Method for authorization
+     *
+     *@param request - HTTP Servlet request
+     *@param user - instance of User's entity
+     *@throws ServletException,IOException
+     *@return page
+     * */
     private String checkIfAdmin(User user, HttpServletRequest request){
         String page = null;
         if(user.isAdmin()){

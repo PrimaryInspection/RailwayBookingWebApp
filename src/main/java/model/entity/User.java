@@ -12,7 +12,6 @@ import java.io.Serializable;
  * @version 1.0
  */
 @AllArgsConstructor
-@NoArgsConstructor
 public class User implements Serializable {
 
     private Long id;
@@ -24,6 +23,11 @@ public class User implements Serializable {
     private String password;
 
     private Boolean admin;
+
+    public User(long l, String test, String test1, String test2, String test3, String test4, boolean b) {
+    }
+
+    public User(){}
 
     public Long getId() {
         return id;
