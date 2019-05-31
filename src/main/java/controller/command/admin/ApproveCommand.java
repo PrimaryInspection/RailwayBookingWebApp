@@ -21,6 +21,7 @@ import static controller.command.admin.CommandAdminUtil.*;
 
 
 public class ApproveCommand implements Command {
+    private static final Logger LOG = LogManager.getLogger(ApproveCommand.class);
     /**
      * Command for approve user's tickets on admin's page
      *
@@ -31,6 +32,7 @@ public class ApproveCommand implements Command {
      * */
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         String page;
         User userNow = (User) request.getSession(false).getAttribute(USER_ATTRIBUTE);
         if (userNow == null || !userNow.isAdmin())
@@ -45,6 +47,7 @@ public class ApproveCommand implements Command {
 
         try {
             RequestService.getInstance().approveRequest(result);
+            LOG.info("Ticket was succesfull approved.");
         } catch (InvalidDataBaseOperation e) {
             request.setAttribute(MESSAGE_ERROR, e.getMessage());
             return Configuration.getInstance().getConfig(Configuration.ERROR);

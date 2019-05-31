@@ -41,6 +41,7 @@ public class CancelAllTicketsCommand implements Command {
         List<Ticket> tickets = RequestService.getInstance().findAllTickets();
         try {
             RequestService.getInstance().cancelRequest(tickets);
+            LOG.info("Succesfull canceled all tickets.");
         } catch (InvalidDataBaseOperation e) {
             request.setAttribute(MESSAGE_ERROR, e.getMessage());
             return Configuration.getInstance().getConfig(Configuration.ERROR);

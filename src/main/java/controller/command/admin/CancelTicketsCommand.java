@@ -8,6 +8,8 @@ import model.dto.Ticket;
 import model.entity.User;
 import model.exception.InvalidDataBaseOperation;
 import model.service.RequestService;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +22,8 @@ import static controller.command.admin.CommandAdminUtil.*;
 
 
 public class CancelTicketsCommand implements Command {
+    private static final Logger LOG = LogManager.getLogger(ApproveCommand.class);
+
     /**
      * Command for canceling one single user's ticket on admin's page
      *
@@ -44,6 +48,7 @@ public class CancelTicketsCommand implements Command {
 
         try {
             RequestService.getInstance().cancelRequest(result);
+            LOG.info("Succesfull canceled ticket.");
         } catch (InvalidDataBaseOperation e) {
             request.setAttribute(MESSAGE_ERROR, e.getMessage());
             return Configuration.getInstance().getConfig(Configuration.ERROR);
