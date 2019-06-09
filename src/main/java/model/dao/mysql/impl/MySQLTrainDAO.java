@@ -15,7 +15,7 @@ import java.util.List;
 
 class MySQLTrainDAO implements TrainDAO {
     private static final Logger LOG = LogManager.getLogger(MySQLTrainDAO.class);
-    private static final MySQLTrainDAO INSTANCE = new MySQLTrainDAO();
+    private static volatile MySQLTrainDAO INSTANCE = new MySQLTrainDAO();
 
     private static final String TABLE_NAME = "train";
     private static final String LABEL_ID = "id";

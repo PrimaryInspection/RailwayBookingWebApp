@@ -3,7 +3,7 @@ package controller.util;
 import java.util.ResourceBundle;
 
 public class Message {
-    private static Message INSTANCE;
+    private static volatile Message INSTANCE;
     private static ResourceBundle bundle;
     private static final String BUNDLE_NAME = "message";
 

@@ -20,7 +20,7 @@ import java.util.List;
 public class TrainService {
     private static final Logger LOG = LogManager.getLogger(TrainService.class);
     private static final DataBase DB = DataBase.MYSQL;
-    private static TrainService INSTANCE;
+    private static volatile TrainService INSTANCE;
 
     private DAOFactory factory;
 

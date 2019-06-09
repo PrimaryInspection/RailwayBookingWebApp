@@ -24,7 +24,7 @@ public class AdminService {
     private static final String USERS_ATTRIBUTE = "users";
 
 
-    private static AdminService INSTANCE;
+    private static volatile AdminService INSTANCE;
     private DAOFactory factory;
 
     private AdminService() {

@@ -15,8 +15,7 @@ public class LoginService {
     private static final DataBase DB = DataBase.MYSQL;
     private static final String USER_DAO = "UserDAO";
     private static final String ADD_USER = "addUser()";
-    private static final String IS_PRESENT_LOGIN = "isPresentUser()";
-    private static LoginService INSTANCE;
+    private static volatile LoginService INSTANCE;
     private DAOFactory factory;
 
     private LoginService() {

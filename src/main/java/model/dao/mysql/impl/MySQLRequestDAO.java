@@ -18,7 +18,7 @@ import java.util.List;
 
 class MySQLRequestDAO implements RequestDAO {
     private static final Logger LOG = LogManager.getLogger(MySQLRequestDAO.class);
-    private static final MySQLRequestDAO INSTANCE = new MySQLRequestDAO();
+    private static volatile MySQLRequestDAO INSTANCE = new MySQLRequestDAO();
 
     private static final String TABLE_NAME = "request";
     private static final String LABEL_ID = "id";
@@ -124,7 +124,6 @@ class MySQLRequestDAO implements RequestDAO {
     }
 
 
-    //TODO REWORK THIS METHOD
     @Override
     public void deleteRequests(final List<Request> requests) throws InvalidDataBaseOperation {
         Connection connection = null;
@@ -160,10 +159,7 @@ class MySQLRequestDAO implements RequestDAO {
                 statement.setLong(2, request.getTrainId());
                 statement.setString(3, request.getType().toString());
                 statement.setDouble(4, request.getPrice());
-
-
                 statement.setLong(5, 1);
-
                 statement.setLong(6, request.getId());
 
                 statement.executeUpdate();
@@ -183,7 +179,7 @@ class MySQLRequestDAO implements RequestDAO {
         }
     }
 
-    //TODO REWORK THIS METHOD
+
     @Override
     public void approveRequests(final List<Request> requests) throws InvalidDataBaseOperation {
         Connection connection = null;
@@ -203,10 +199,7 @@ class MySQLRequestDAO implements RequestDAO {
                     throw new InvalidDataBaseOperation("Already approved " + request.getId());
                 }
                 statement.setLong(5, 2);
-
                 statement.setLong(6, request.getId());
-
-
                 statement.executeUpdate();
             }
 

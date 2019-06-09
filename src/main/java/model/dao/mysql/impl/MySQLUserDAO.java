@@ -17,7 +17,7 @@ import java.util.List;
 class MySQLUserDAO implements UserDAO {
 
     private static final Logger LOG = LogManager.getLogger(MySQLUserDAO.class);
-    private static final MySQLUserDAO INSTANCE = new MySQLUserDAO();
+    private static volatile MySQLUserDAO INSTANCE = new MySQLUserDAO();
 
     private static final String TABLE_NAME = "user";
     private static final String LABEL_ID = "id";
@@ -166,6 +166,7 @@ class MySQLUserDAO implements UserDAO {
             LOG.info(LogMessageDAOUtil.createInfoDelete(TABLE_NAME, user.getId()));
         } catch (SQLException e) {
             LOG.error(LogMessageDAOUtil.createErrorCreate(TABLE_NAME));
+            e.printStackTrace();
         }
     }
 

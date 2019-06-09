@@ -18,7 +18,7 @@ public class ControllerHelper {
     private Map<String, Command> commands = new HashMap<>();
     private static final String BUNDLE_NAME = "command";
     private static final String PARAMETER = "command";
-    private static ControllerHelper INSTANCE;
+    private static volatile ControllerHelper INSTANCE;
 
     private ResourceBundle bundle;
 

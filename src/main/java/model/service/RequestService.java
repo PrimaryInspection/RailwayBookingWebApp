@@ -23,7 +23,7 @@ import java.util.List;
 public class RequestService {
     private static final Logger LOG = LogManager.getLogger(RequestService.class);
     private static final DataBase DB = DataBase.MYSQL;
-    private static RequestService INSTANCE;
+    private static volatile RequestService INSTANCE;
 
     private DAOFactory factory;
 

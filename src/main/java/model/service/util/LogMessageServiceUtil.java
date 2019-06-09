@@ -1,6 +1,5 @@
 package model.service.util;
 
-//TODO: JavaDoc!!
 public class LogMessageServiceUtil {
     private static final String ERROR_WITH_DAO = "Error with ";
     private static final String SUCCESSFUL_OPERATION = "Successful operation with ";
@@ -23,7 +22,7 @@ public class LogMessageServiceUtil {
     }
 
     /**
-     * Bulder for creating error logs
+     * Builder for creating error logs
      * @param dao - the place where the error occurred
      * @param method - the method where the error occurred
      *

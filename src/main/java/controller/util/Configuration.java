@@ -3,7 +3,7 @@ package controller.util;
 import java.util.ResourceBundle;
 
 public class Configuration {
-    private static Configuration INSTANCE;
+    private static volatile Configuration INSTANCE;
     private static ResourceBundle bundle;
     private static final String BUNDLE_NAME = "config";
 

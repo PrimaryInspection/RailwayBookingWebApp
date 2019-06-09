@@ -18,7 +18,7 @@ import java.util.*;
 public class RouteService {
     private static final Logger LOG = LogManager.getLogger(RouteService.class);
     private static final DataBase DB = DataBase.MYSQL;
-    private static RouteService INSTANCE;
+    private static volatile RouteService INSTANCE;
 
     private DAOFactory factory;
 
@@ -129,13 +129,13 @@ public class RouteService {
 
 
     Double findBerthPrice(Route route){
-        Price compartment = factory.createPriceDAO().findById(route.getPriceId());
-        return compartment.getBerthFactor() * route.getDistance();
+        Price berth = factory.createPriceDAO().findById(route.getPriceId());
+        return berth.getBerthFactor() * route.getDistance();
     }
 
 
     Double findDeluxePrice(Route route){
-        Price compartment = factory.createPriceDAO().findById(route.getPriceId());
-        return compartment.getDeluxeFactor() * route.getDistance();
+        Price deluxe = factory.createPriceDAO().findById(route.getPriceId());
+        return deluxe.getDeluxeFactor() * route.getDistance();
     }
 }

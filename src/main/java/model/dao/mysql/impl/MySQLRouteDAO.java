@@ -16,7 +16,7 @@ import java.util.List;
 
 class MySQLRouteDAO implements RouteDAO {
     private static final Logger LOG = LogManager.getLogger(MySQLRouteDAO.class);
-    private static final MySQLRouteDAO INSTANCE = new MySQLRouteDAO();
+    private  static  volatile  MySQLRouteDAO INSTANCE = new MySQLRouteDAO();
 
     private static final String TABLE_NAME = "route";
     private static final String LABEL_ID = "id";

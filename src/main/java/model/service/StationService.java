@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 public class StationService {
     private static final Logger LOG = LogManager.getLogger(StationService.class);
     private static final DataBase DB = DataBase.MYSQL;
-    private static StationService INSTANCE;
+    private static volatile StationService INSTANCE;
 
     private DAOFactory factory;
 

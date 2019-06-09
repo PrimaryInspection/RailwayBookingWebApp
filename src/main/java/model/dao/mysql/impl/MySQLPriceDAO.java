@@ -14,10 +14,12 @@ import java.util.List;
 
 class MySQLPriceDAO implements PriceDAO {
     private static final Logger LOG = LogManager.getLogger(MySQLPriceDAO.class);
-    private static final MySQLPriceDAO INSTANCE = new MySQLPriceDAO();
+    private static volatile MySQLPriceDAO INSTANCE = new MySQLPriceDAO();
     private static final String TABLE_NAME = "price";
     private static final String LABEL_ID = "id";
     private static final String LABEL_BERTH_FACTOR = "berthFactor";
+    private static final String LABEL_COMPARTMENT_FACTOR = "compartmentFactor";
+
     private static final String LABEL_DELUXE_FACTOR = "deluxeFactor";
     private String SELECT_ALL_PRICES = QueryManager.getProperty("priceSelectAll");
     private String CREATE_PRICE = QueryManager.getProperty("priceCreate");
@@ -116,7 +118,7 @@ class MySQLPriceDAO implements PriceDAO {
         Price result = new Price();
         result.setId(set.getLong(LABEL_ID));
         result.setBerthFactor(set.getDouble(LABEL_BERTH_FACTOR));
-        result.setCompartmentFactor(set.getDouble(LABEL_BERTH_FACTOR));
+        result.setCompartmentFactor(set.getDouble(LABEL_COMPARTMENT_FACTOR));
         result.setDeluxeFactor(set.getDouble(LABEL_DELUXE_FACTOR));
 
         return result;

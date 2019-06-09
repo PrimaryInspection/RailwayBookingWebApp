@@ -15,7 +15,7 @@ import java.util.List;
 
 class MySQLStationDAO implements StationDAO {
     private static final Logger LOG = LogManager.getLogger(MySQLStationDAO.class);
-    private static final MySQLStationDAO INSTANCE = new MySQLStationDAO();
+    private static volatile MySQLStationDAO INSTANCE = new MySQLStationDAO();
 
     private static final String TABLE_NAME = "station";
     private static final String LABEL_ID = "id";
