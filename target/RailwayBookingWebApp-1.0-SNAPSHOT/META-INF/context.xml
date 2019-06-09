@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource name="java:comp/env/jdbc/railway_system"
+              auth="Container"
+              username="root"
+              password="root"
+              type="javax.sql.DataSource"
+              maxTotal="100"
+              maxIdle="30"
+              maxWaitMillis="10000"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/railway_system?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
+</Context>
